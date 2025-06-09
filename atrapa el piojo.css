@@ -1,0 +1,67 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://fmrockandpop.com/media/k2/items/cache/06bbd2c3c523631602e8c9b20a072f31_L.webp?t=20240904_181443');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#juego {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+}
+
+#piojo {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-image: url('https://i.pinimg.com/474x/c2/99/b0/c299b05971b98eb9601ecfa907f45653.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: top 0.2s ease, left 0.2s ease;
+  cursor: pointer;
+}
+
+.neon {
+  color: #ffffff;
+  text-shadow:
+    0 0 5px #000000,
+    0 0 10px #000000,
+    0 0 15px #000000,
+    0 0 20px #000000,
+    0 0 25px #ffffff;
+}
+.menu {
+    display: flex;                         /* Usa flexbox para alinear horizontalmente */
+    justify-content: center;              /* Centrado */
+    gap: 40px;                             /* Espaciado entre los links */
+    background-color: transparent;        /* Fondo completamente transparente */
+    padding: 20px 0;                       /* Espaciado vertical */
+    position: relative;
+    z-index: 10;                           /* Encima de otros elementos */
+}
+
+/* Estilo de los links del menú */
+.menu a {
+    color: #ffffff;                        /* Color blanco */
+    text-decoration: none;                /* Sin subrayado */
+    padding: 8px 16px;                     /* Espacio interior */
+    font-weight: bold;                    /* Negrita */
+    border-radius: 4px;                    /* Bordes redondeados */
+    text-shadow:                          /* Sombra luminosa tipo "neón" */
+        0 0 5px #ffffff,
+        0 0 10px #ffffff,
+        0 0 15px #ffffff,
+        0 0 20px #ffffff,
+        0 0 30px #ffffff;
+    transition: transform 0.2s;            /* Suaviza la animación al pasar el mouse */
+}
+
+/* Efecto hover para los links del menú */
+.menu a:hover {
+    transform: scale(1.1);                 /* Aumenta ligeramente de tamaño */
+}

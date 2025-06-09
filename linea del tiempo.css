@@ -1,0 +1,152 @@
+/* Fondo y estilo general del body */
+body {
+    background-image: url('https://fmrockandpop.com/media/k2/items/cache/06bbd2c3c523631602e8c9b20a072f31_L.webp?t=20240904_181443'); /* Imagen de fondo */
+    background-size: cover;                  /* La imagen cubre todo el fondo */
+    background-repeat: no-repeat;            /* No se repite */
+    background-attachment: fixed;            /* Permanece fija al hacer scroll */
+    background-position: center;             /* Centrada en pantalla */
+    color: #ffffff;                          /* Texto blanco */
+    font-family: Arial;                      /* Fuente del texto */
+    margin: 0;                               /* Elimina margen por defecto */
+    padding: 0;                              /* Elimina relleno por defecto */
+    text-align: center;                      /* Centra el texto */
+    position: relative;                      /* Se usa con z-index */
+    z-index: 0;                              /* Nivel de apilamiento base */
+}
+
+/* Oscurece el fondo */
+body::before { 
+    content: "";                             /* Elemento vacío */
+    position: fixed;                         /* Permanece fijo */
+    top: 0;
+    left: 0;
+    width: 100%;                             /* Cubre todo el ancho */
+    height: 100%;                            /* Cubre todo el alto */
+    background-color: rgba(0, 0, 0, 0.669); /* Fondo negro semitransparente */
+    z-index: -1;                             /* Queda detrás del contenido */
+}
+
+body {
+  cursor: url('cursor.png'), auto; /* Cambia el cursor a una imagen personalizada */
+}
+
+/* Título principal */
+h1 {
+    text-align: center;                    /* Centrado */
+    margin-bottom: 40px;                   /* Espacio hacia abajo */
+    color: #ffffff;                        /* Blanco */
+    text-shadow: 0 0 10px #ffffff;         /* Sombra luminosa blanca */
+}
+
+/* Recuadro de la línea de tiempo */
+.timeline {
+    position: relative;                    /* Para posicionar elementos dentro */
+    max-width: 600px;                      /* Ancho máximo */
+    margin: auto;                          /* Centrado horizontal */
+    padding: 20px 0;                       /* Espacio vertical */
+}
+
+/* Línea vertical central de la línea de tiempo */
+.timeline::before {
+    content: '';                           /* Elemento vacío */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;                             /* Posicionado al 50% horizontal */
+    transform: translateX(-50%);           /* Ajuste fino para centrarla */
+    width: 4px;                            /* Grosor de la línea */
+    background-color: #ffffff;             /* Color blanco */
+    z-index: 0;                            /* Detrás del contenido */
+}
+
+/* Elemento individual de la línea de tiempo */
+.timeline-item {
+    position: relative;
+    margin: 30px 0;                        /* Espaciado vertical */
+    width: 100%;
+}
+
+/* Circulito de cada evento */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background: white;
+    border: 3px solid #ffffff;
+    border-radius: 50%;                    /* Lo hace circular */
+    z-index: 1;                            /* Lo pone encima de la línea */
+}
+
+/* Contenedor de texto del evento */
+.timeline-content {
+    position: relative;
+    width: 45%;                            /* Cubre menos de la mitad del ancho */
+    padding: 15px 20px;                    /* Espaciado interior */
+    background: rgba(255, 255, 255, 0.1);  /* Fondo blanco transparente */
+    border-radius: 10px;                   /* Bordes redondeados */
+    box-shadow: 0 0 10px #fff3;            /* Sombra tenue */
+    transition: transform 0.3s;            /* Suaviza el efecto al pasar el mouse */
+}
+
+/* Eventos impares se alinean a la izquierda */
+.timeline-item:nth-child(odd) .timeline-content {
+    left: 0;                               /* A la izquierda */
+    margin-right: 55%;                     /* Empujado hacia la izquierda */
+}
+
+/* Eventos pares se alinean a la derecha */
+.timeline-item:nth-child(even) .timeline-content {
+    left: 55%;                             /* Se corre a la derecha */
+}
+
+/* Efecto al pasar el mouse sobre un evento */
+.timeline-content:hover {
+    transform: scale(1.02);                /* Ligeramente más grande */
+}
+
+/* Efecto de texto "neón" blanco */
+.neon {
+    color: #ffffff;
+    text-shadow: 
+        0 0 5px #000000, 
+        0 0 10px #000000, 
+        0 0 15px #000000, 
+        0 0 20px #000000, 
+        0 0 25px #ffffff;
+}
+
+/* Contenedor del menú superior */
+.menu {
+    display: flex;                         /* Usa flexbox para alinear horizontalmente */
+    justify-content: center;              /* Centrado */
+    gap: 40px;                             /* Espaciado entre los links */
+    background-color: transparent;        /* Fondo completamente transparente */
+    padding: 20px 0;                       /* Espaciado vertical */
+    position: relative;
+    z-index: 10;                           /* Encima de otros elementos */
+}
+
+/* Estilo de los links del menú */
+.menu a {
+    color: #ffffff;                        /* Color blanco */
+    text-decoration: none;                /* Sin subrayado */
+    padding: 8px 16px;                     /* Espacio interior */
+    font-weight: bold;                    /* Negrita */
+    border-radius: 4px;                    /* Bordes redondeados */
+    text-shadow:                          /* Sombra luminosa tipo "neón" */
+        0 0 5px #ffffff,
+        0 0 10px #ffffff,
+        0 0 15px #ffffff,
+        0 0 20px #ffffff,
+        0 0 30px #ffffff;
+    transition: transform 0.2s;            /* Suaviza la animación al pasar el mouse */
+}
+
+/* Efecto hover para los links del menú */
+.menu a:hover {
+    transform: scale(1.1);                 /* Aumenta ligeramente de tamaño */
+}

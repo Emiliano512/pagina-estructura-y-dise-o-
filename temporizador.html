@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¡Mata al los Piojo!</title>
+  <link rel="stylesheet" href="temporizador.css">
+</head>
+<body>
+  <nav class="menu">
+    <a href="los piojos.html">Inicio</a>
+    <a href="discografia.html">Discografía</a>
+    <a href="tienda los piojos.html">Tienda</a>
+    <a href="minijuegos.html">Minijuegos</a>
+    <a href="integrantes.html">Integrantes</a>
+  </nav>
+
+  <h1 class="neon">¡Mata al los Piojo!</h1>
+
+  <div class="agujeros">
+    <div class="agujero"><img class="piojo" id="piojo1" src=""></div>
+    <div class="agujero"><img class="piojo" id="piojo2" src=""></div>
+    <div class="agujero"><img class="piojo" id="piojo3" src=""></div>
+    <div class="agujero"><img class="piojo" id="piojo4" src=""></div>
+    <div class="agujero"><img class="piojo" id="piojo5" src=""></div>
+    <div class="agujero"><img class="piojo" id="piojo6" src=""></div>
+    <div class="agujero"><img class="piojo" id="piojo7" src=""></div>
+    <div class="agujero"><img class="piojo" id="piojo8" src=""></div>
+    <div class="agujero"><img class="piojo" id="piojo9" src=""></div>
+    <div class="agujero"><img class="piojo" id="piojo10" src=""></div>
+    <div class="agujero"><img class="piojo" id="piojo11" src=""></div>
+    <div class="agujero"><img class="piojo" id="piojo12" src=""></div>
+  </div>
+
+  <div class="neon">
+    <h2>Puntos: <span id="puntos">0</span></h2>
+    <h2>Tiempo: <span id="timer">10:00</span></h2>  <!-- Aquí se muestra el temporizador -->
+  </div>
+
+  <!-- Botones para controlar el juego -->
+  <div>
+    <button id="startBtn">Iniciar</button>
+    <button id="resetBtn">Reiniciar</button>
+  </div>
+
+  <!-- Sonido que se reproduce al terminar el tiempo -->
+  <audio id="sonidoFin" src="sonido_fin.mp3" preload="auto"></audio>
+
+  <script src="temporizador.js"></script>
+</body>
+</html>

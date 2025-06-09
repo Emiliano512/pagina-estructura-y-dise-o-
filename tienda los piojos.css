@@ -1,0 +1,101 @@
+/* ---------- ESTILOS GENERALES DEL BODY ---------- */
+body {
+    background-image: url('https://fmrockandpop.com/media/k2/items/cache/06bbd2c3c523631602e8c9b20a072f31_L.webp?t=20240904_181443'); /* Imagen de fondo */
+    background-size: cover;                /* La imagen cubre toda la pantalla */
+    background-repeat: no-repeat;          /* No se repite */
+    background-attachment: fixed;          /* Fija la imagen al fondo (efecto parallax) */
+    background-position: center;           /* Centrada */
+    color: #ffffff;                        /* Texto blanco por defecto */
+    font-family: Arial, sans-serif;        /* Fuente del texto */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+
+/* ---------- OSCURECEDOR DEL FONDO PARA MEJORAR LEGIBILIDAD ---------- */
+body::before { 
+    content: "";                           /* Pseudo-elemento vacío */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);  /* Fondo negro con transparencia */
+    z-index: -1;                           /* Detrás del contenido */
+}
+
+body {
+  cursor: url('cursor.png'), auto; /* Cambia el cursor a una imagen personalizada */
+}
+
+/* ---------- ENCABEZADOS CON COLOR BLANCO ---------- */
+h1, h2, h3 {
+    color: #ffffff;
+}
+
+/* ---------- CONTENEDOR FLEX DE TODOS LOS INTEGRANTES DE LA BANDA ---------- */
+.integrantes {
+    display: flex;                         /* Flexbox para alinear los integrantes */
+    flex-wrap: wrap;                       /* Permite que bajen en pantalla chica */
+    justify-content: center;              /* Centrado horizontal */
+    gap: 20px;                             /* Espacio entre ellos */
+    padding: 20px;                         /* Espaciado interior */
+}
+
+/* ---------- CAJA INDIVIDUAL DE CADA MÚSICO ---------- */
+.musico {
+    background-color: rgba(78, 65, 65, 0.5); /* Fondo semitransparente oscuro */
+    border-radius: 15px;                  /* Bordes redondeados */
+    padding: 15px;                        /* Espaciado interno */
+    width: 320px;                         /* Ancho fijo */
+}
+
+/* ---------- IMAGEN DE CADA MÚSICO ---------- */
+.musico img {
+    display: block;                       /* Quita el espacio inferior de imagenes inline */
+    margin: 0 auto;                       /* Centra horizontalmente */
+    border-radius: 10px;                  /* Bordes redondeados */
+}
+
+/* ---------- TEXTO DESCRIPTIVO GENERAL ---------- */
+.texto {
+    width: 80%;                           /* Ancho relativo */
+    max-width: 800px;                     /* Máximo ancho en pantallas grandes */
+    margin: auto;                         /* Centrado */
+    text-align: center;
+}
+
+/* ---------- ESTILO DE TEXTO "NEÓN" ---------- */
+.neon {
+    color: #ffffff;
+    text-shadow: 
+        0 0 5px #000000, 
+        0 0 10px #000000, 
+        0 0 15px #000000, 
+        0 0 20px #000000, 
+        0 0 25px #ffffff;
+}
+
+/* ---------- IMÁGENES CON EFECTO HOVER ---------- */
+.imagenes img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;      /* Transición suave al agrandar */
+}
+
+.imagenes img:hover {
+    transform: scale(1.05);               /* Efecto de agrandar */
+}
+
+/* ---------- MISMO EFECTO PARA LAS IMÁGENES DE LOS INTEGRANTES ---------- */
+.integrantes img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.integrantes img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra suave al pasar el cursor */
+}

@@ -1,0 +1,82 @@
+/* Estilos generales del body */
+body {
+    background-image: url('https://fmrockandpop.com/media/k2/items/cache/06bbd2c3c523631602e8c9b20a072f31_L.webp?t=20240904_181443'); /* Imagen de fondo */
+    background-size: cover;                /* Hace que la imagen cubra toda la pantalla */
+    background-repeat: no-repeat;          /* Evita que la imagen se repita */
+    background-attachment: fixed;          /* La imagen queda fija mientras se hace scroll */
+    background-position: center;           /* Centra la imagen en pantalla */
+    color: #ffffff;                        /* Color del texto por defecto (blanco) */
+    font-family: Arial, sans-serif;        /* Fuente del texto */
+    margin: 0;                             /* Elimina margen por defecto del navegador */
+    padding: 0;                            /* Elimina relleno por defecto del navegador */
+    text-align: center;                    /* Centra el texto dentro del body */
+    position: relative;                    /* Permite posicionar elementos con z-index */
+    z-index: 0;                            /* Nivel base de apilamiento */
+}
+
+/* Oscurece todo el fondo para mejorar la legibilidad del contenido */
+body::before {
+    content: "";                           /* Pseudo-elemento vacío */
+    position: fixed;                       /* Se fija al viewport */
+    top: 0;
+    left: 0;
+    width: 100%;                           /* Cubre todo el ancho */
+    height: 100%;                          /* Cubre todo el alto */
+    background-color: rgba(0, 0, 0, 0.5);  /* Fondo negro con 50% de opacidad */
+    z-index: -1;                           /* Se coloca detrás del contenido */
+}
+
+/* Efecto de texto tipo "neón" blanco con sombras negras */
+.neon {
+    color: #ffffff;
+    text-shadow: 
+        0 0 5px #000000, 
+        0 0 10px #000000, 
+        0 0 15px #000000, 
+        0 0 20px #000000, 
+        0 0 25px #ffffff;
+}
+
+/* Contenedor principal: imagen a la izquierda y texto a la derecha */
+.imagen {
+    display: flex;                         /* Usa Flexbox para alinear elementos en fila */
+    align-items: flex-start;               /* Alinea al inicio verticalmente */
+    justify-content: center;              /* Centra horizontalmente */
+    gap: 20px;                             /* Espacio entre columnas */
+    padding: 20px;                         /* Espaciado interior */
+    max-width: 1200px;                     /* Ancho máximo del contenedor */
+    margin: auto;                          /* Centrado horizontal automático */
+    flex-wrap: wrap;                       /* Permite que se acomode en varias filas si no entra */
+    text-align: left;                      /* Alineación del texto dentro del contenedor */
+}
+
+/* Columna izquierda con las imágenes */
+.imagenes {
+    display: flex;                         /* Flexbox */
+    flex-direction: column;               /* Ordena verticalmente */
+    gap: 15px;                             /* Espacio entre imágenes */
+}
+
+/* Estilos de las imágenes */
+.imagenes img {
+    max-width: 300px;                      /* Ancho máximo */
+    height: auto;                          /* Altura proporcional */
+    border-radius: 10px;                   /* Bordes redondeados */
+}
+
+/* Contenedor de texto a la derecha (mal ubicado en tu código: este selector apunta mal, ver comentario abajo) */
+.imagenes .texto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Caja de texto descriptiva */
+.texto {
+    flex: 1;                               /* Ocupa todo el espacio disponible */
+    min-width: 300px;                      /* Ancho mínimo para que se vea bien en responsive */
+    background-color: rgba(0, 0, 0, 0.6);  /* Fondo negro semitransparente */
+    padding: 20px;                         /* Espaciado interior */
+    border-radius: 10px;                   /* Bordes redondeados */
+    color: #ffffff;                        /* Texto blanco */
+}

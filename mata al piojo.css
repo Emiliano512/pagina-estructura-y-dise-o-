@@ -1,0 +1,106 @@
+body {
+  text-align: center;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://fmrockandpop.com/media/k2/items/cache/06bbd2c3c523631602e8c9b20a072f31_L.webp?t=20240904_181443');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+body {
+  cursor: url('cursor.png'), auto; /* Cambia el cursor a una imagen personalizada */
+}
+
+.juego {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px auto;
+}
+
+.agujero {
+  width: 120px;
+  height: 120px;
+  background-color: #333;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agujeros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  grid-template-rows: repeat(3, 1fr);    /* 3 filas */
+  gap: 25px;
+  justify-items: center;
+  align-items: center;
+}
+
+.agujeros {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+  grid-template-rows: repeat(3, 1fr);    /* 3 filas */
+  gap: 25px;
+  max-width: 600px;
+  margin: 0 auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.piojo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Muestra la imagen completa sin recorte */
+  position: absolute;
+  bottom: -100%;
+  transition: bottom 0.2s;
+  cursor: pointer;
+}
+.piojo.visible {
+  bottom: 0;
+}
+
+.neon {
+  color: #ffffff;
+  text-shadow:
+    0 0 5px #000000,
+    0 0 10px #000000,
+    0 0 15px #000000,
+    0 0 20px #000000,
+    0 0 25px #ffffff;
+}
+.menu {
+    display: flex;                         /* Usa flexbox para alinear horizontalmente */
+    justify-content: center;              /* Centrado */
+    gap: 40px;                             /* Espaciado entre los links */
+    background-color: transparent;        /* Fondo completamente transparente */
+    padding: 20px 0;                       /* Espaciado vertical */
+    position: relative;
+    z-index: 10;                           /* Encima de otros elementos */
+}
+
+/* Estilo de los links del menú */
+.menu a {
+    color: #ffffff;                        /* Color blanco */
+    text-decoration: none;                /* Sin subrayado */
+    padding: 8px 16px;                     /* Espacio interior */
+    font-weight: bold;                    /* Negrita */
+    border-radius: 4px;                    /* Bordes redondeados */
+    text-shadow:                          /* Sombra luminosa tipo "neón" */
+        0 0 5px #ffffff,
+        0 0 10px #ffffff,
+        0 0 15px #ffffff,
+        0 0 20px #ffffff,
+        0 0 30px #ffffff;
+    transition: transform 0.2s;            /* Suaviza la animación al pasar el mouse */
+}
+
+/* Efecto hover para los links del menú */
+.menu a:hover {
+    transform: scale(1.1);                 /* Aumenta ligeramente de tamaño */
+}

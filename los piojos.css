@@ -1,0 +1,178 @@
+/* Estilos generales del cuerpo del documento */
+body {
+    background-image: url('https://fmrockandpop.com/media/k2/items/cache/06bbd2c3c523631602e8c9b20a072f31_L.webp?t=20240904_181443'); /* Imagen de fondo */
+    background-size: cover;                  /* Escala la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat;            /* Evito que la imagen se repita */
+    background-attachment: fixed;            /* Mantengo la imagen fija al hacer scroll (desplazamiento) */
+    background-position: center;             /* Centro la imagen de fondo */
+    color: #ffffff;                          /* Color de texto principal blanco */
+    font-family: Arial;                      /* Fuente del texto */
+    margin: 0;                               /* Elimina margen por defecto del navegador */
+    padding: 0;                              /* Elimina padding por defecto */
+    text-align: center;                      /* Centra todo el contenido de texto */
+    position: relative;                      /* Define posición para poder usar z-index */
+    z-index: 0;                              /* Coloca este elemento por debajo de otros si fuera necesario */
+}
+
+/* Crea una capa oscura sobre la imagen de fondo para mejorar la legibilidad del texto */
+body::before { 
+    content: "";                             /* Pseudo-elemento vacío */
+    position: fixed;                         /* Se mantiene fijo al hacer scroll */
+    top: 0;                                  /* Empieza en la parte superior */
+    left: 0;                                 /* Empieza desde el borde izquierdo */
+    width: 100%;                             /* Cubre todo el ancho */
+    height: 100%;                            /* Cubre toda la altura */
+    background-color: rgba(0, 0, 0, 0.473);  /* Color negro semitransparente */
+    z-index: -1;                             /* Coloca esta capa detrás de todo el contenido */
+}
+
+body {
+  cursor: url('cursor.png'), auto; /* Cambia el cursor a una imagen personalizada */
+}
+
+/* Aplica color blanco a todos los títulos principales */
+h1, h2, h3 {
+    color: #ffffff;
+}
+
+/* Define un contenedor de texto centrado */
+.texto {
+    width: 80%;              /* Ancho del contenedor */
+    max-width: 800px;        /* Máximo ancho permitido */
+    margin: auto;            /* Centra horizontalmente */
+    text-align: center;      /* Centra el texto dentro del contenedor */
+}
+
+/* Le agrego un color "neón" blanco con sombra negra para que resalte*/
+.neon {
+    color: #ffffff;
+    text-shadow: 
+        0 0 5px #000000,
+        0 0 10px #000000,
+        0 0 15px #000000,
+        0 0 20px #000000,
+        0 0 25px #ffffff;
+}
+
+/* Recuadro lateral izquierdo donde irían los nombres */
+.lateral {
+    position: fixed;                           /* Siempre visible en pantalla */
+    top: 20px;                                 /* Separado desde el borde superior */
+    left: 100px;                               /* Separado desde el borde izquierdo */
+    background-color: rgba(0, 0, 0, 0.6);    /* Fondo negro semitransparente */
+    padding: 15px;                             /* Espaciado interior */
+    border-radius: 10px;                       /* Bordes redondeados */
+    color: rgb(255, 255, 255);               /* Texto blanco */
+    width: 200px;                              /* Ancho del recuadro */
+    text-align: left;                          /* Alineación del texto a la izquierda */
+}
+
+/* Estilo del título del recuadro lateral */
+.lateral h3 {
+    margin-top: 0;               /* Elimina margen superior */
+    font-size: 18px;             /* Modifico el tamaño de letra */
+    border-bottom: 1px solid #fff; /* Línea blanca inferior */
+    padding-bottom: 5px;         /* Espacio bajo el texto */
+}
+
+/* Elimina viñetas y espaciado de la lista */
+.lateral ul {
+    list-style-type: none;   /* Quita las viñetas */
+    padding: 0;              /* Elimina padding (interior) */
+    margin: 0;               /* Elimina margen */
+}
+
+/* Espacio entre los distintos items de la lista */
+.lateral ul li {
+    margin-bottom: 10px;
+}
+
+/* Estilos de los enlaces en la lista lateral */
+.lateral ul li a {
+    color: #ffffff;          /* Color blanco */
+    text-decoration: none;  /* Sin subrayado */
+    font-weight: bold;      /* Negrita */
+}
+
+/* Efecto al pasar el mouse sobre los enlaces */
+.lateral ul li a:hover {
+    text-decoration: underline; /* Subraya al pasar el mouse */
+}
+
+/* Recuadro lateral derecho para otro contenido */
+.derecha {
+    position: fixed;                           /* Siempre visible */
+    top: 20px;                                 /* Espaciado desde arriba */
+    right: 100px;                              /* Espaciado desde el borde derecho */
+    background-color: rgba(0, 0, 0, 0.473);  /* Agrego un fondo negro y que sea semitransparente */
+    padding: 15px;                             /* Espaciado interno */
+    border-radius: 10px;                       /* Bordes redondeados */
+    color: rgb(255, 255, 255);               /* Texto blanco */
+    width: 200px;                              /* Ancho del recuadro */
+    text-align: left;                          /* Texto alineado */
+}
+
+/* Título del recuadro derecho */
+.derecha h3 {
+    margin-top: 0;
+    font-size: 18px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+}
+
+/* Contenido del recuadro derecho */
+.derecha ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Espacio entre los el texto central y la lista */
+.derecha ul li {
+    margin-bottom: 10px;
+}
+
+/* Efecto cuando paso el mouse sobre los ítems de la derecha */
+.derecha ul li a:hover {
+    color: #ffffff;        /* Mantiene el color blanco */
+    font-weight: bold;     /* Negrita */
+}
+
+.pogo {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ffffff;
+  transition: transform 0.2s;
+}
+
+.pogo:hover {
+  transform: scale(1.1);
+}
+
+/* Animación de sacudida */
+@keyframes pogo-shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.Pogo {
+  animation: pogo-shake 0.3s infinite;
+  background-color: #111111 !important;
+  color: #ff00ff;
+}
+

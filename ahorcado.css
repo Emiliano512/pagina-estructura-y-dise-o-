@@ -1,0 +1,175 @@
+/* Fondo rockero con capa oscura */
+body {
+    background-image: url('https://fmrockandpop.com/media/k2/items/cache/06bbd2c3c523631602e8c9b20a072f31_L.webp?t=20240904_181443');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    cursor: url('cursor.png'), auto; /* Cursor personalizado */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Estilo del juego */
+#ahorcado {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 0 20px #ffffff;
+    width: 400px;
+    text-align: center;
+    margin: auto;
+}
+
+h1 {
+    font-size: 32px;
+    color: #ffffff;
+    text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #fff;
+}
+
+#palabraOculta {
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin: 20px 0;
+    text-shadow: 0 0 5px #fff;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 18px;
+    width: 220px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 18px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #fff;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+}
+
+#mensaje {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+#mensaje.ganaste {
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+#mensaje.perdiste {
+    color: red;
+    text-shadow: 0 0 10px red;
+}
+
+#errores, #letrasUsadas {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* OPCIONAL: laterales decorativos (si querés agregar contenido extra después) */
+.lateral {
+    position: center;
+    top: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    width: 200px;
+    text-align: left;
+}
+
+.lateral {
+    left: 100px;
+} 
+
+.lateral h3, .derecha h3 {
+    margin-top: 0;
+    font-size: 18px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+}
+
+.lateral ul, .derecha ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lateral ul li, .derecha ul li {
+    margin-bottom: 10px;
+}
+
+.lateral ul li a, .derecha ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.lateral ul li a:hover, .derecha ul li a:hover {
+    text-decoration: underline;
+}
+.menu {
+    display: flex;                         /* Usa flexbox para alinear horizontalmente */
+    justify-content: center;              /* Centrado */
+    gap: 40px;                             /* Espaciado entre los links */
+    background-color: transparent;        /* Fondo completamente transparente */
+    padding: 20px 0;                       /* Espaciado vertical */
+    position: relative;
+    z-index: 10;                           /* Encima de otros elementos */
+}
+
+/* Estilo de los links del menú */
+.menu a {
+    color: #ffffff;                        /* Color blanco */
+    justify-content: center;
+    text-decoration: none;                /* Sin subrayado */
+    padding: 8px 16px;                     /* Espacio interior */
+    font-weight: bold;                    /* Negrita */
+    border-radius: 4px;                    /* Bordes redondeados */
+    text-shadow:                          /* Sombra luminosa tipo "neón" */
+        0 0 5px #ffffff,
+        0 0 10px #ffffff,
+        0 0 15px #ffffff,
+        0 0 20px #ffffff,
+        0 0 30px #ffffff;
+    transition: transform 0.2s;            /* Suaviza la animación al pasar el mouse */
+}
+
+/* Efecto hover para los links del menú */
+.menu a:hover {
+    transform: scale(1.1);                 /* Aumenta ligeramente de tamaño */
+}

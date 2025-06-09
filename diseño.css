@@ -1,0 +1,163 @@
+/*ESTILOS GENERALES DEL BODY*/
+body {
+    background-image: url('https://fmrockandpop.com/media/k2/items/cache/06bbd2c3c523631602e8c9b20a072f31_L.webp?t=20240904_181443'); /* Imagen de fondo */
+    background-size: cover;                /* La imagen cubre toda la pantalla */
+    background-repeat: no-repeat;          /* No se repite */
+    background-attachment: fixed;          /* Fija el fondo (efecto parallax) */
+    background-position: center;           /* Centrado */
+    color: #ffffff;                        /* Texto blanco por defecto */
+    font-family: Arial, sans-serif;        /* Fuente base */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+
+/*CAPA OSCURA SOBRE LA IMAGEN PARA LEGIBILIDAD*/
+body::before { 
+    content: "";                           /* Elemento vacío */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);  /* Negro semitransparente */
+    z-index: -1;                           /* Se ubica detrás del contenido */
+}
+
+body {
+  cursor: url('cursor.png'), auto; /* Cambia el cursor a una imagen personalizada */
+}
+
+/*COLORES DE LOS ENCABEZADOS*/
+h1, h2, h3 {
+    color: #ffffff;
+}
+
+/*CONTENEDOR FLEX DE LOS INTEGRANTES*/
+.integrantes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* BLOQUE INDIVIDUAL DE CADA MÚSICO  */
+.musico {
+    background-color: rgba(78, 65, 65, 0.5); /* Fondo oscuro con transparencia */
+    border-radius: 15px;
+    padding: 15px;
+    width: 320px;
+}
+
+/* IMAGEN DEL MÚSICO */
+.musico img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+/*CUADRO DE TEXTO CENTRAL*/
+.texto {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+/*EFECTO NEÓN PARA TÍTULOS O TEXTOS DESTACADOS*/
+.neon {
+    color: #ffffff;
+    text-shadow: 
+        0 0 5px #000000, 
+        0 0 10px #000000, 
+        0 0 15px #000000, 
+        0 0 20px #000000, 
+        0 0 25px #ffffff;
+}
+
+/*IMÁGENES CON EFECTO ZOOM AL PASAR EL CURSOR*/
+.imagenes img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.imagenes img:hover {
+    transform: scale(1.05);
+}
+
+/*EFECTO HOVER TAMBIÉN PARA LAS IMÁGENES DE .integrantes*/
+.integrantes img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.integrantes img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* MENÚ DE NAVEGACIÓN SUPERIOR */
+.menu {
+    display: flex;                         /* Distribuye enlaces en línea */
+    justify-content: center;              /* Centrado horizontal */
+    gap: 40px;                             /* Separación entre links */
+    background-color: transparent;        /* Fondo completamente transparente */
+    padding: 20px 0;                       /* Espaciado vertical */
+    position: relative;
+    z-index: 10;                           /* Se ubica sobre el fondo oscuro */
+}
+
+/* ESTILOS INDIVIDUALES PARA CADA LINK DEL MENÚ */
+.menu a {
+    color: #ffffff;                       /* Color blanco */
+    text-decoration: none;               /* Sin subrayado */
+    padding: 8px 16px;                   /* Espaciado interno */
+    font-weight: bold;                   /* Negrita */
+    border-radius: 4px;                  /* Bordes redondeados */
+    text-shadow:                          /* Efecto "brillo" blanco */
+        0 0 5px #ffffff, 
+        0 0 10px #ffffff, 
+        0 0 15px #ffffff, 
+        0 0 20px #ffffff, 
+        0 0 30px #ffffff;
+    transition: transform 0.2s;
+}
+
+/* EFECTO ZOOM CUANDO SE PASA EL MOUSE POR UN LINK */
+.menu a:hover {
+    transform: scale(1.1);
+}
+
+/* ---- CORRECCIONES AÑADIDAS ---- */
+
+/* QUITAR BULLETS DE LISTAS */
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* COLORES CONSISTENTES PARA LINKS VISITADOS */
+.menu a:visited {
+    color: #ffffff;
+    text-shadow:
+        0 0 5px #ffffff, 
+        0 0 10px #ffffff, 
+        0 0 15px #ffffff, 
+        0 0 20px #ffffff, 
+        0 0 30px #ffffff;
+}
+
+/* OPCIONAL: aplicar esto globalmente a todos los links */
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #ffffff;
+}
